@@ -49,7 +49,6 @@ export const Form = (props) => {
 
                 <DropDown 
                     label="Time" 
-                    itens={props.times} 
                     valor={time}
                     aoAlterado={valor => {setTime(valor)}}
                     required

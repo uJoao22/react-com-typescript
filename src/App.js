@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Banner from './components/Banner';
 import Form from './components/Form';
 import Team from './components/Team';
+import TimeContext from './context/times';
 
 function App() {
   
@@ -53,10 +54,9 @@ function App() {
     <div className="App">
       <Banner />
 
-      <Form 
-        times={times.map(time => time.nome)} 
-        aoColaboradorCadastrado={colaborador  => aoNovoColaboradorAdicionado(colaborador)} 
-      />
+      <TimeContext.Provider value={times.map(time => time.nome)}>
+        <Form aoColaboradorCadastrado={colaborador  => aoNovoColaboradorAdicionado(colaborador)} />
+      </TimeContext.Provider>
 
       {times.map(time => <Team 
         key={time.nome} 
