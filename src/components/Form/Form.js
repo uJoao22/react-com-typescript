@@ -1,19 +1,22 @@
 import { useState } from 'react';
-import './Form.css'
+import './Form.css';
 import FieldText from '../FieldText';
 import DropDown from '../DropDown';
 import Button from '../Button';
 
 export const Form = (props) => {
-
     const [nome, setNome] = useState('João');
     const [cargo, setCargo] = useState('Programador Junior');
-    const [imagem, setImagem] = useState('http://asdaskdjas.jpg');
+    const [imagem, setImagem] = useState('https://github.com/uJoao22.png');
     const [time, setTime] = useState('Programação');
     
     const save = (e) => {
         e.preventDefault();
         props.aoColaboradorCadastrado({nome, cargo, imagem, time});
+        setNome('');
+        setCargo('');
+        setImagem('');
+        setTime('Programação');
     }
 
     return (
