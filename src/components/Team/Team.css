@@ -1,6 +1,5 @@
 .team {
     text-align: center;
-    padding: 32px;
 }
 
 .team h3 {
@@ -12,7 +11,7 @@
 
 .colaboradores {
     display: flex;
-    justify-content:  space-around;
+    justify-content: center;
     margin-top: 32px;
     flex-wrap: wrap;
 }

@@ -1,9 +1,9 @@
 import './Card.css';
 
-    export const Card = ({ colaborador }) => {
+    export const Card = ({ colaborador, corDeFundo }) => {
     return(
         <div className='colaborador'>
-            <div className='cabecalho'>
+            <div className='cabecalho' style={{ backgroundColor: corDeFundo }}>
                 <img src={colaborador.imagem} alt={colaborador.nome}></img>
             </div>
 

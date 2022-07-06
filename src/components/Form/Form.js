@@ -16,7 +16,7 @@ export const Form = (props) => {
         setNome('');
         setCargo('');
         setImagem('');
-        setTime('Programação');
+        setTime('');
     }
 
     return (

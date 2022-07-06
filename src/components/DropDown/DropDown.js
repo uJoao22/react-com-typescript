@@ -7,7 +7,11 @@ export const DropDown = (props) => (
 
         <TimeContext.Consumer>
             {itens => (
-                <select value={props.valor} onChange={e =>  props.aoAlterado(e.target.value)} required={props.required}>
+                <select required={props.required}
+                    onChange={e =>  props.aoAlterado(e.target.value)} 
+                    value={props.valor}
+                >
+                    <option value="">Selecione um time</option>
                     {itens.map(item => <option key={item}>{item}</option>)}
                 </select>
             )}
